@@ -15,7 +15,7 @@ Typical ML Algorithms built from scratch and inspired from the Web.
 - K-Means
 - ...
 
-# Technologies Used (Limited to Available Algorithms:
+# Technologies Used (Limited to Available Algorithms):
 
 - Python 3.8
 - pip 20.1.1
