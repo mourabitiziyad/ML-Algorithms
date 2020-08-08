@@ -32,4 +32,4 @@ Typical ML Algorithms built from scratch and inspired from the Web.
 
 Last update - 08/08/2020
 
-* In progress
+*In progress
