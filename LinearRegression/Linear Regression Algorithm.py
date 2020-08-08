@@ -13,10 +13,8 @@ def create_dataset(hm, variance, correlation ,step=2):
         y = val + random.randrange(-variance, variance)
         Ys.append(y)
         if correlation == 'pos':
-            print('yes')
             val += step
         elif correlation == 'neg':
-            print('yes')
             val -= step
     Xs = [i for i in range(len(Ys))]
     print("Ys are: ", Ys)
@@ -38,15 +36,17 @@ def coef_determination(Ys_orig, Ys_line):
 
     return 1 - (squared_error_regr / squared_error_y_mean)
 
-Xs, Ys = create_dataset(40, 40, 'neg',2)
+Xs, Ys = create_dataset(40, 40, 'neg',2)    # 'pos', 'neg', or any value for neither
 
 
 m, b = best_fit_line(Xs, Ys)
-print(m, b)
+print("Best Slope: ", m)
+print("Best Intercept: ", b)
 
 regression_line = [(m*x) + b for x in Xs]
 
 r_squared = coef_determination(Ys, regression_line)
+
 print(r_squared)
 
 plt.scatter(Xs, Ys)
